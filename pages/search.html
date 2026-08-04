@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results | PI Network</title>
+    <link rel="stylesheet" href="../Styles/main.css">
+    <link rel="icon" type="image/svg+xml" href="../resourses/Pi-Network-icon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVJkEZSMUkrQ6ryJWAlcnNO6OPS/ువ0mHqZaJeBRDQgQQQfpllin9zcWfV1ZohvjIam8z9Z0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html">
+            <div class="logo-container">
+                <img src="../resourses/Pi-Network-icon.svg" alt="PI Network icon" class="logo">
+                <h1><span class="Bold-text" style="padding-left: 10px; font-weight: 700;">Pi </span>Network</h1>
+            </div>
+        </a>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="about.html" class="nav-list-items ">About</a></li>
+                <li><a href="services.html" class="nav-list-items modal-custom">Services</a></li>
+                <li><a href="contacts.html" class="nav-list-items active">contacts</a></li>
+                <li><input type="search" placeholder="  Search..." class="search-field"></li>
+            </ul>
+
+            <!-- <div class="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div> -->
+
+            <div class="manu-modal">
+                <ul>
+                    <li><a href="services.html#Philanthropy" class="nav-list-items">Philanthropy</a></li>
+                    <li><a href="services.html#Orphanage" class="nav-list-items">Orphanage</a></li>
+                    <li><a href="services.html#Education" class="nav-list-items">Education</a></li>
+                    <li><a href="services.html#Emergency crises" class="nav-list-items">Emergency crises</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section>
+            <h1>Search Results</h1>
+            <input type="text" class="search-field" id="searchInput" placeholder="Search again...">
+            <div id="results" class="search-results">
+                <!-- Results will display here -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <h2>Pi Network</h2>
+            <p>Join the revolution of a global community.</p>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <!-- <div class="footer-links">
+            <a href="#about" class="nav-list-items">About</a>
+            <a href="#Services" class="nav-list-items">Services</a>
+            <a href="#contacts" class="nav-list-items">contacts</a>
+        </div> -->
+        
+        <p class="footer-copyright">&copy; 2026 Pi Network. All rights reserved. Designed by Romeo kambela</p>
+    </footer>
+
+    <script src="../Scripts/searchDisplay.js"></script>
+    <script src="../Scripts/searchResults.js"></script>
+    <script src="../Scripts/animated-hero.js"></script>
+    <script src="../Scripts/modal.js"></script>
+</body>
+</html>
