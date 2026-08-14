@@ -36,6 +36,26 @@ h1,h2,h1>span,h2>span{
     border: none;
 }
 
+.services {
+    position: relative;
+    isolation: isolate;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+}
+
+.services::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../resourses/temp/Pattern2.webp");
+    background-repeat: repeat;
+    background-size: 500px;
+    opacity: 0.05;
+    z-index: -1;
+}
+
 /* 
     Header | ------------------------------------------------ */
 .header{
@@ -47,7 +67,7 @@ h1,h2,h1>span,h2>span{
     align-items: center;
     justify-content: space-between;
     color: var(--main-text-color);
-    z-index: 1;
+    z-index: 1000;
     opacity: 0.9;
 }
 
@@ -211,9 +231,8 @@ h1,h2,h1>span,h2>span{
 
 .main{
     position: relative;
-    padding: 1rem 1rem;
+    padding: 0rem 1rem;
     color: var(--main-lightmode-text-color);
-    margin: 2rem;
 }
 
 .stroke-title{
@@ -271,6 +290,21 @@ h1,h2,h1>span,h2>span{
     margin-top: 4rem;
 }
 
+
+.main_section_2{
+    position: relative;
+    color: var(--main-lightmode-text-color);
+    top: -4rem;
+    display: flex;
+    margin-top: 4rem;
+    height: 50dvh;
+}
+
+#b2{
+    height: 70dvh;
+    
+}
+
 /*
     card | ------------------------------------------------ */
 
@@ -289,8 +323,8 @@ h1,h2,h1>span,h2>span{
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
     border-radius: 0.5rem;
     width: 20dvw;
-    height: 40dvh;
-    overflow: hidden;
+    height: 60dvh;
+    overflow:hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -471,4 +505,456 @@ h1,h2,h1>span,h2>span{
 .search-result-item p {
     color: var(--secondary-text-color);
     font-size: 0.9rem;
+}
+
+
+
+/* 
+   HAMBURGER MENU | -----------------------------------*/
+
+.hamburger-menu {
+    display: none;
+    width: 42px;
+    height: 42px;
+    padding: 8px;
+    margin-right: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.hamburger-menu .bar {
+    display: block;
+    width: 26px;
+    height: 3px;
+    border-radius: 5px;
+    background-color: var(--main-text-color);
+    transition: all 0.3s ease;
+}
+
+
+/* 
+   MOBILE NAVIGATION | -----------------------------------*/
+
+@media (max-width: 768px) {
+
+    .header {
+        height: 4rem;
+        padding: 0;
+        opacity: 1;
+    }
+
+    .logo {
+        width: 2.6rem;
+        height: 2.6rem;
+        margin-left: 15px;
+    }
+
+    .logo-container h1 {
+        font-size: 1.25rem;
+    }
+
+    .nav {
+        display: flex;
+        align-items: center;
+    }
+
+    /* Hide desktop navigation | ----------------------------------- */
+    .nav-list {
+        position: fixed;
+        top: 4rem;
+        right: -100%;
+        
+        width: 80%;
+        max-width: 320px;
+        height: calc(100vh - 4rem);
+
+        margin: 0;
+        padding: 2rem;
+
+        background-color: var(--secondary-color);
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 1.5rem;
+
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.25);
+
+        transition: right 0.3s ease;
+        z-index: 1000;
+    }
+
+    /* Open menu | ----------------------------------- */
+    .nav-list.menu-open {
+        right: 0;
+    }
+
+    .nav-list li {
+        width: 100%;
+    }
+
+    .nav-list li a {
+        display: block;
+        width: 100%;
+        font-size: 1.1rem;
+        padding: 0.5rem 0;
+    }
+
+    .search-field {
+        width: 100%;
+        height: 2.5rem;
+        padding: 0 1rem;
+    }
+
+    /* Show hamburger | ----------------------------------- */
+    .hamburger-menu {
+        display: flex;
+        position: relative;
+        z-index: 1100;
+    }
+
+    /* Hamburger -> X  | ----------------------------------- */
+    .hamburger-menu.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger-menu.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger-menu.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+
+    /* 
+       SERVICES DROPDOWN | -----------------------------------*/
+
+    .manu-modal {
+        position: fixed;
+        top: auto;
+        right: auto;
+        bottom: 20px;
+        left: 20px;
+
+        width: calc(100% - 40px);
+        max-width: 300px;
+
+        padding: 1rem;
+
+        z-index: 1200;
+    }
+
+
+    /* 
+       HERO | -----------------------------------*/
+
+    .hero {
+        height: auto;
+        min-height: 30vh;
+
+        padding: 0 1.5dvh;
+        
+        justify-content: center;
+        text-align: center;
+
+        top: 0;
+        position: relative;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .hero-header {
+        padding-left: 0;
+        margin: 0;
+    }
+
+    .hero-header::after {
+        display: none;
+    }
+
+    .hero-image {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .hero-image img {
+        position: absolute;
+        width: 100%;
+        max-width: 400px;
+        bottom: 0;
+        right: 0;
+    }
+
+
+    /*
+       MAIN | -----------------------------------*/
+
+    .main {
+        padding: 0 1rem;
+    }
+
+    .about-main,
+    .contact-main {
+        margin: 1rem 0;
+        padding: 1rem;
+        top: 0;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-section {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .sidebar {
+        width: 100%;
+        border-left: none;
+        border-top: 1px solid var(--border-color);
+
+        padding: 2rem 0 0;
+        margin-top: 2rem;
+    }
+
+
+    /* 
+       TITLES / TEXT | -----------------------------------*/
+
+    .stroke-title {
+        font-size: 1.5rem;
+        margin: 1rem 0;
+        padding-left: 1.5rem;
+    }
+
+    .stroke-title::after {
+        height: 35px;
+        width: 3px;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+        line-height: 1.7;
+        margin: 1.5rem 0;
+    }
+
+
+    /* 
+       SERVICE CARDS | ----------------------------------- */
+
+    .service-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+
+    .card-container {
+        width: 100%;
+        height: auto;
+        min-height: 320px;
+
+        margin: 0;
+
+        gap: 1rem;
+    }
+
+    .card-image {
+        height: auto;
+        padding-top: 2rem;
+        font-size: 3rem;
+    }
+
+    .card-content {
+        height: auto;
+        padding: 1.5rem;
+    }
+
+    .card-content h1 {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .card-content p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        text-align: center;
+    }
+
+
+    /*
+       DOWNLOAD SECTION | -----------------------------------*/
+
+    .main_section_2 {
+        height: auto;
+        min-height: auto;
+
+        top: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        text-align: center;
+
+        margin-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    #b2 {
+        width: 100%;
+        height: auto;
+        max-width: 400px;
+        margin-top: 2rem;
+    }
+
+
+    /*
+       ABOUT PAGE HERO*/
+
+    #about-hero {
+        height: auto;
+        min-height: 40vh;
+    }
+
+    .about-hero {
+        padding: 0;
+    }
+
+    .about-hero-image {
+        position: relative;
+        width: 100%;
+    }
+
+    .about-hero-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+    }
+
+
+    /* 
+       ABOUT PAGE IMAGE | -----------------------------------*/
+
+    .about-content > img {
+        width: 70% !important;
+        max-width: 300px;
+        margin: auto;
+    }
+
+
+    /*
+       FOOTER | -----------------------------------*/
+
+    .footer {
+        height: auto;
+        min-height: 350px;
+
+        padding: 3rem 1.5rem;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        text-align: center;
+    }
+
+    .footer-content {
+        position: static;
+        align-items: center;
+        margin-bottom: 3rem;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    .footer-copyright {
+        position: static;
+        margin-top: 2rem;
+        line-height: 1.5;
+    }
+
+
+    /* 
+       SERVICES PAGE | -----------------------------------*/
+
+    .services {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+}
+
+
+/*
+   SMALL PHONES | -----------------------------------*/
+
+@media (max-width: 480px) {
+
+    .logo {
+        margin-left: 10px;
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+
+    .logo-container h1 {
+        font-size: 1.1rem;
+    }
+
+    .hamburger-menu {
+        margin-right: 10px;
+    }
+
+    .hero {
+        min-height: 30vh;
+        padding: 2.5rem 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 1.9rem;
+    }
+
+    .hero-content p {
+        display: none;
+    }
+
+    .hero-image img{
+        height: 30dvb;
+        width: auto;
+    }
+
+    .stroke-title {
+        font-size: 1.35rem;
+    }
+
+    .card-container {
+        min-height: 300px;
+    }
+
+    .footer {
+        padding: 2.5rem 1rem;
+    }
+
 }

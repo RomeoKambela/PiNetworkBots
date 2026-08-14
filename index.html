@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PI Network | Botswana</title>
     <link rel="stylesheet" href="Styles/main.css">
-    <link rel="icon" type="image/svg+xml" href="resourses/Pi-Network-icon.svg">
+    <link rel="icon" type="image/png" href="resourses/Pi-Network-icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVJkEZSMUkrQ6ryJWAlcnNO6OPS/ువ0mHqZaJeBRDQgQQQfpllin9zcWfV1ZohvjIam8z9Z0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 <body>
     <header class="header">
         <a href="index.html">
             <div class="logo-container">
-                <img src="resourses/Pi-Network-icon.svg" alt="PI Network icon" class="logo">
+                <img src="resourses/Pi-Network-icon.png" alt="PI Network icon" class="logo">
                 <h1><span class="Bold-text" style="padding-left: 10px; font-weight: 700;">Pi </span>Network</h1>
             </div>
         </a>
@@ -24,11 +24,11 @@
                 <li><input type="search" placeholder="  Search..." class="search-field"></li>
             </ul>
 
-            <!-- <div class="hamburger-menu">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div> -->
+            <button class="hamburger-menu" aria-label="Open navigation menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
 
             <div class="manu-modal">
                 <ul>
@@ -43,7 +43,7 @@
     <section class="hero">
         <div class="hero-content">
             <h1 class="hero-header">Welcome to <br><span id="hero-header-span" style="font-weight: 700;">Pi  Network</span></h1>
-            <p>Lore ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies aliquam, nunc nisl aliquet nunc, quis aliquet nunc nisl eget nunc.</p>
+            <p>Start mining Thebe, Botswana's community-powered cryptocurrency, with our free, battery-friendly mobile app.</p>
             <a href="#about" class="btn-white">Learn More</a>
         </div>
         <div class="hero-image">
@@ -55,8 +55,7 @@
         <section class="about" id="about">
             <div class="about-content">
                 <h2 class="stroke-title">Pi Network</h2>
-                <p>Lore ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies aliquam, nunc nisl
-                    aliquet nunc, quis aliquet nunc nisl eget nunc.</p>
+                <p>Pi Network is a community-powered cryptocurrency that allows users to mine Thebe, a digital currency, using their mobile devices. Our mission is to create a more inclusive and accessible financial system for everyone.</p>
                 <a href="#Services" class="purple-bg-btn">Explore Services</a>
             </div>
         
@@ -66,8 +65,8 @@
                         <i class="fas fa-people-group" ></i>
                     </div>
                     <div class="card-content">
-                        <h1>Card Title</h1>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                        <h1>Decentralized</h1>
+                        <p>Secure, transparent, community-owned digital money — built on the same principle of open consensus as the traditional kgotla gathering, where every voice has a place at the table.</p>
                     </div>
                 </div>
 
@@ -76,8 +75,8 @@
                         <i class="fas fa-people-group"></i>
                     </div>
                     <div class="card-content">
-                        <h1>Card Title</h1>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                        <h1>Community-Owned</h1>
+                        <p>Unlike traditional financial systems, Pi Network is owned and governed by its community of users, ensuring that the platform remains aligned with the needs and values of those who use it.</p>
                     </div>
                 </div>
 
@@ -86,11 +85,23 @@
                         <i class="fas fa-people-group"></i>
                     </div>
                     <div class="card-content">
-                        <h1>Card Title</h1>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                        <h1>Accessible</h1>
+                        <p>Pi Network aims to provide a financial system that is accessible to everyone, regardless of their location or economic background. Our mobile app makes it easy for anyone to participate in the Pi Network ecosystem.</p>
                     </div>
                 </div>
             </section>
+        </section>
+
+        <br>
+        <br>
+        <section class="main_section_2" id="download">
+            <div class="about-content">
+                <h2 class="stroke-title">Download the app and start mining today.</h2>
+                <p>Join the revolution of a global community.</p>
+                <!-- <a href="#Services" class="purple-bg-btn"><img src="Images/app-store.png" alt="App Store"></a> -->
+                <a href="#Services"><img src="resourses/Google_Play_Store_badge_EN.svg" alt="Google Play"></a>
+            </div>
+            <img id="b2" src="resourses/banners/main.png">
         </section>
 
         <!-- Additional sections can be added here --> 
@@ -120,4 +131,5 @@
     <script src="Scripts/searchResults.js"></script>
     <script src="Scripts/animated-hero.js"></script>
     <script src="Scripts/modal.js"></script>
+    <script src="Scripts/hamburger.js"></script>
 </body>

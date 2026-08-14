@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PI Network | Services</title>
     <link rel="stylesheet" href="../Styles/main.css">
-    <link rel="icon" type="image/svg+xml" href="../resourses/Pi-Network-icon.svg">
+    <link rel="icon" type="image/png" href="../resourses/Pi-Network-icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVJkEZSMUkrQ6ryJWAlcnNO6OPS/ువ0mHqZaJeBRDQgQQQfpllin9zcWfV1ZohvjIam8z9Z0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 <body>
     <header class="header">
         <a href="../index.html">
             <div class="logo-container">
-                <img src="../resourses/Pi-Network-icon.svg" alt="PI Network icon" class="logo">
+                <img src="../resourses/Pi-Network-icon.png" alt="PI Network icon" class="logo">
                 <h1><span class="Bold-text" style="padding-left: 10px; font-weight: 700;">Pi </span>Network</h1>
             </div>
         </a>
@@ -24,11 +24,11 @@
                 <li><input type="search" placeholder="  Search..." class="search-field"></li>
             </ul>
 
-            <!-- <div class="hamburger-menu">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div> -->
+            <button class="hamburger-menu" aria-label="Open navigation menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
 
             <div class="manu-modal">
                 <ul>
@@ -42,8 +42,20 @@
     </header>
     
 
-    <main class="main contact-main">
+    <main class="main contact-main services">
         <section class="about about-section" id="about">
+            <div class="about-content">
+                <h2 class="stroke-title" id="Philanthropy">Mobile Mining App</h2>
+                <p>Free for iOS and Android. Tap once a day to mine Thebe in the background. no drain on your battery, no drain on your data bundle. Invitation-based onboarding keeps the network trusted and spam-free from day one.
+                </p>
+                <a href="#Services"><img src="../resourses/Google_Play_Store_badge_EN.svg" alt="Google Play"></a>
+            </div>
+
+            <br>
+            <br>
+            <br>
+
+
             <div class="about-content">
                 <h2 class="stroke-title" id="Philanthropy">Philanthropy</h2>
                 <p>Lore ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies aliquam, nunc nisl
@@ -82,8 +94,7 @@
 
             <div class="about-content">
                 <h2 class="stroke-title" id="Emergency crises">Emergency crises</h2>
-                <p>Lore ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies aliquam, nunc nisl
-                    aliquet nunc, quis aliquet nunc nisl eget nunc. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem
+                <p>nsectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem
                 </p>
                 <a href="#Services" class="purple-bg-btn">Get Service</a>
             </div>
@@ -97,21 +108,7 @@
         </section>
         
         <section class="sidebar">
-            <h3>Sidebar Title</h3>
-            <br>
-            <p>This is a sidebar section that can contain additional information, links, or any other content you want to
-            include.</p>
-
-            <br>
-            <div>
-                <p><i class="fa-solid fa-phone"></i>    Phone: +267 71 234 567</p>
-                <br>
-                <p><i class="fa-solid fa-envelope"></i> Email: info@pinetwork.com</p>
-                <br>
-                <p><i class="fa-solid fa-clock"></i>   Working Hours: Mon-Fri 9:00 AM - 5:00 PM</p>
-                <br>
-                <p><i class="fa-solid fa-map-marker"></i>   Address: 123 Main Street, City, Country</p>
-            </div>
+            <h3>Ads space</h3>
         </section>
 
         <!-- Additional sections can be added here --> 
@@ -141,4 +138,5 @@
     <script src="../Scripts/searchResults.js"></script>
     <script src="../Scripts/animated-hero.js"></script>
     <script src="../Scripts/modal.js"></script>
+    <script src="../Scripts/hamburger.js"></script>
 </body>

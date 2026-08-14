@@ -1,0 +1,48 @@
+.abt-carousel {
+    display: flex;
+    width: max-content;
+    gap: 30px;
+    overflow: hidden;
+    animation: abt-scroll 18s linear infinite;
+}
+
+.abt-carousel-itm {
+    flex: 0 0 120px;
+    text-align: center;
+}
+
+.abt-carousel-itm img {
+    width: 90px;
+    height: 90px;
+    display: block;
+    margin: 0 auto 10px;
+
+    object-fit: cover;
+    border-radius: 50%;
+
+    border: 4px solid hsl(35, 97%, 64%);
+    padding: 3px;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.abt-carousel-itm p {
+    margin: 0;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+@keyframes abt-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-50% - 15px));
+    }
+}
+
+.abt-carousel:hover {
+    animation-play-state: paused;
+}
